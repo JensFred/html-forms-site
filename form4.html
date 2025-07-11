@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparison Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+<div id="header-container"></div>
+<script>
+  fetch('elements/header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-container').innerHTML = data;
+    });
+</script>
+<div class="tophero">
+  Income Protection Quote >
+</div>
+  <div class="hero4">
+    
+    <h4>Gross Annual Income?</h4>
+   <p><a href="#" id="needHelpToggle">Need help?</a></p>
+
+<div id="helpBox" class="cta-button4 help-box" style="display: none;">
+  We can help you decide. Choose the option that best reflects the type of income or responsibility you'd like to protect — for example, your job, mortgage, or recurring expenses.
+</div>
+  </div>
+
+  <div class="cta-banner-wrapper4">
+    
+  <div class="cta-column4">
+  <div class="cta-button4">
+  <div class="cta-input-wrapper4">
+    <span class="currency-symbol4">£</span>
+    <input type="number" id="grossIncome" name="grossIncome" class="cta-input5" placeholder="e.g. 30000" />
+  </div>
+</div>
+
+
+
+   <div class="cta-button-row4">
+  <a href="form3.html" class="cta-back-button4"><i class="fa-solid fa-arrow-left"></i></a>
+  <a href="form5.html" class="cta-next-button4">Next <i class="fa-solid fa-arrow-right-long icon-gap-left"></i></a>
+</div>
+  </div>
+
+ 
+  
+</div>
+
+
+  <div class="promo">
+  <p>Our panel of trusted insurers include...</p>
+  <div class="brand-logos">
+    <img src="images/brands/Aegon-life-insurance.png" alt="Ageon">
+    <img src="images/brands/Liverpool-Victoria-life-insurance.png" alt="LV=">
+    <img src="images/brands/Bright-Grey-life-insurance.png" alt="Bright Grey">
+    <img src="images/brands/AIG-life-insurance.png" alt="AIG">
+    <img src="images/brands/Zurich-life-insurance.png" alt="Zurich">
+    <img src="images/brands/Vitality-health-insurance.png" alt="Vitality">
+    <img src="images/brands/Legal-General-life-insurance.png" alt="Legal & General">
+    <img src="images/brands/Aviva-health-insurance.png" alt="Aviva">
+    <img src="images/brands/AXA-health-insurance.png" alt="Axa">
+    <img src="images/brands/exeter.png" alt="Exeter">
+    <img src="images/brands/Bupa-health-insurance.png" alt="Bupa">
+  </div>
+</div>
+
+<section class="two-column-section">
+  <div class="two-column-container">
+    <div class="column left-column">
+        <img src="images/couple.png" alt="Couple Comparison" />
+  
+    </div>
+    <div class="column right-column">
+          <h2>Why Choose Comparison Site?</h2>
+      <p>We compare policies from top UK insurers to help you find the best coverage at the best price. Whether it's income protection, life, or health insurance—we make it easy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="card-section">
+  <div class="section-header">
+    <h2>What Makes Us Different?</h2>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Expert Guidance</h3>
+      <p>We’re FCA-regulated and completely impartial—helping you choose the right insurance without pressure.</p>
+    </div>
+    <div class="card">
+      <h3>Tailored Quotes</h3>
+      <p>Get personalised results that match your job, income and health—no generic pricing.</p>
+    </div>
+    <div class="card">
+      <h3>Top UK Providers</h3>
+      <p>We only work with trusted insurers like Aviva, Legal & General, Zurich and Vitality.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="faq-header">
+    <h2>Frequently Asked Questions</h2>
+  </div>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-toggle">What is income protection?<span class="icon">+</span></button>
+      <div class="accordion-content">
+        <p>Income protection is a type of insurance that pays out a regular income if you're unable to work due to illness or injury.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-toggle">How much does it cost?<span class="icon">+</span></button>
+      <div class="accordion-content">
+        <p>Costs vary based on your job, health, income, and policy terms—but you can get covered from as little as £10/month.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-toggle">When does it pay out?<span class="icon">+</span></button>
+      <div class="accordion-content">
+        <p>It typically starts after your chosen deferred period (e.g., 4, 8, or 13 weeks) and continues until you recover or the policy ends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-container"></div>
+<script>
+  fetch('elements/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    });
+</script>
+
+  <script src="scripts.js"></script>
+ <script>
+  document.querySelectorAll('.accordion-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.icon');
+
+      button.classList.toggle('active');
+      if (button.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.padding = '0 1rem 1rem';
+        icon.textContent = '−';
+      } else {
+        content.style.maxHeight = null;
+        content.style.padding = '0 1rem';
+        icon.textContent = '+';
+      }
+    });
+  });
+</script>
+<script>
+  document.getElementById('needHelpToggle').addEventListener('click', function (e) {
+    e.preventDefault();
+    const helpBox = document.getElementById('helpBox');
+    const toggleLink = document.getElementById('needHelpToggle');
+    
+    if (helpBox.style.display === 'none') {
+      helpBox.style.display = 'block';
+      toggleLink.textContent = 'Hide help';
+    } else {
+      helpBox.style.display = 'none';
+      toggleLink.textContent = 'Need help?';
+    }
+  });
+</script>
+
+</body>
+</html>

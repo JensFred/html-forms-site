@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comparison Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+<div id="header-container"></div>
+<script>
+  fetch('elements/header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-container').innerHTML = data;
+    });
+</script>
+
+  <div class="hero3">
+    <h1>Your Income Protection Quote</h1>
+    <p>Our Income Protection Finder can choose your perfect cover from hundreds of policies.</p>
+  </div>
+
+  <div class="cta-banner-wrapper3">
+     <div class="banner-column3">
+    <div class="banner-image-wrapper3">
+   <h3><i class="fa-solid fa-ellipsis-vertical"></i> What do you want to protect?</h3>
+   <p>Choosing what to protect can help lower your preminum amount.</p>
+  </div></div>
+  <div class="cta-column3">
+    <a href="asu-form.html" class="cta-button3"><div class="cta-top-row3"><div class="cta-label3">Income </div><div class="cta-icon-circle"><i class="fas fa-circle"></i></div></div></a>
+    <a href="asu-form.html" class="cta-button3"><div class="cta-top-row3"><div class="cta-label3">Mortgage </div><div class="cta-icon-circle"><i class="fas fa-circle-check"></i></div></div></a>
+    <a href="asu-form.html" class="cta-button3"><div class="cta-top-row3"><div class="cta-label3">Credit Repayments </div><div class="cta-icon-circle"><i class="fas fa-circle"></i></div></div></a>
+    <a href="asu-form.html" class="cta-button3"><div class="cta-top-row3"><div class="cta-label3">Other </div><div class="cta-icon-circle"><i class="fas fa-circle"></i></div></div></a>
+    <a href="next-step.html" class="cta-next-button3">Next &gt;&gt;</a>
+    
+  </div>
+
+ 
+  
+</div>
+
+
+  <div class="promo">
+  <p>Our panel of trusted insurers include...</p>
+  <div class="brand-logos">
+    <img src="images/brands/Aegon-life-insurance.png" alt="Ageon">
+    <img src="images/brands/Liverpool-Victoria-life-insurance.png" alt="LV=">
+    <img src="images/brands/Bright-Grey-life-insurance.png" alt="Bright Grey">
+    <img src="images/brands/AIG-life-insurance.png" alt="AIG">
+    <img src="images/brands/Zurich-life-insurance.png" alt="Zurich">
+    <img src="images/brands/Vitality-health-insurance.png" alt="Vitality">
+    <img src="images/brands/Legal-General-life-insurance.png" alt="Legal & General">
+    <img src="images/brands/Aviva-health-insurance.png" alt="Aviva">
+    <img src="images/brands/AXA-health-insurance.png" alt="Axa">
+    <img src="images/brands/exeter.png" alt="Exeter">
+    <img src="images/brands/Bupa-health-insurance.png" alt="Bupa">
+  </div>
+</div>
+
+<section class="two-column-section">
+  <div class="two-column-container">
+    <div class="column left-column">
+        <img src="images/couple.png" alt="Couple Comparison" />
+  
+    </div>
+    <div class="column right-column">
+          <h2>Why Choose Comparison Site?</h2>
+      <p>We compare policies from top UK insurers to help you find the best coverage at the best price. Whether it's income protection, life, or health insurance—we make it easy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="card-section">
+  <div class="section-header">
+    <h2>What Makes Us Different?</h2>
+  </div>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Expert Guidance</h3>
+      <p>We’re FCA-regulated and completely impartial—helping you choose the right insurance without pressure.</p>
+    </div>
+    <div class="card">
+      <h3>Tailored Quotes</h3>
+      <p>Get personalised results that match your job, income and health—no generic pricing.</p>
+    </div>
+    <div class="card">
+      <h3>Top UK Providers</h3>
+      <p>We only work with trusted insurers like Aviva, Legal & General, Zurich and Vitality.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="faq-header">
+    <h2>Frequently Asked Questions</h2>
+  </div>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-toggle">What is income protection?<span class="icon">+</span></button>
+      <div class="accordion-content">
+        <p>Income protection is a type of insurance that pays out a regular income if you're unable to work due to illness or injury.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-toggle">How much does it cost?<span class="icon">+</span></button>
+      <div class="accordion-content">
+        <p>Costs vary based on your job, health, income, and policy terms—but you can get covered from as little as £10/month.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-toggle">When does it pay out?<span class="icon">+</span></button>
+      <div class="accordion-content">
+        <p>It typically starts after your chosen deferred period (e.g., 4, 8, or 13 weeks) and continues until you recover or the policy ends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-container"></div>
+<script>
+  fetch('elements/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    });
+</script>
+
+  <script src="scripts.js"></script>
+ <script>
+  document.querySelectorAll('.accordion-toggle').forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector('.icon');
+
+      button.classList.toggle('active');
+      if (button.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        content.style.padding = '0 1rem 1rem';
+        icon.textContent = '−';
+      } else {
+        content.style.maxHeight = null;
+        content.style.padding = '0 1rem';
+        icon.textContent = '+';
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>
