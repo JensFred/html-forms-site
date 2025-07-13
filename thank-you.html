@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You - Comparison Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<div id="header-container"></div>
+<script>
+  fetch('elements/header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header-container').innerHTML = data;
+    });
+</script>
+
+  <div class="hero3">
+    <h1>Thank You!</h1>
+    <p>We're finding your perfect income protection quotes.</p>
+  </div>
+
+  <div class="cta-banner-wrapper3">
+     <div class="banner-column3">
+    <div class="banner-image-wrapper3">
+   <h3><i class="fa-solid fa-check-circle"></i> Your Quote Request</h3>
+   <p>We'll compare policies from our trusted insurers and send you personalized quotes within 24 hours.</p>
+  </div></div>
+  <div class="cta-column3">
+    <div class="cta-button3" style="background: #22c55e; color: white; padding: 20px; margin: 10px 0;">
+      <h4><i class="fas fa-envelope"></i> Check Your Email</h4>
+      <p>Your quotes will be sent to your email address.</p>
+    </div>
+    <div class="cta-button3" style="background: #3b82f6; color: white; padding: 20px; margin: 10px 0;">
+      <h4><i class="fas fa-phone"></i> Or Call Us</h4>
+      <p>Speak to our experts: <strong>0800 123 4567</strong></p>
+    </div>
+    <a href="index.html" class="cta-next-button3">Back to Home</a>
+  </div>
+</div>
+
+  <div class="promo">
+  <p>Our panel of trusted insurers include...</p>
+  <div class="brand-logos">
+    <img src="images/brands/Aegon-life-insurance.png" alt="Aegon">
+    <img src="images/brands/Legal-General-life-insurance.png" alt="Legal & General">
+    <img src="images/brands/Aviva-health-insurance.png" alt="Aviva">
+    <img src="images/brands/AXA-health-insurance.png" alt="AXA">
+    <img src="images/brands/Zurich-life-insurance.png" alt="Zurich">
+    <img src="images/brands/Vitality-health-insurance.png" alt="Vitality">
+    <img src="images/brands/Bupa-health-insurance.png" alt="Bupa">
+  </div>
+</div>
+
+<div id="footer-container"></div>
+<script>
+  fetch('elements/footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer-container').innerHTML = data;
+    });
+</script>
+
+</body>
+</html> 
