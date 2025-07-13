@@ -31,10 +31,10 @@
    <p>Choosing what to protect can help lower your preminum amount.</p>
   </div></div>
   <div class="cta-column3">
-    <a href="form1.html" class="cta-button3"><div class="cta-top-row3"><div class="cta-label3">Income </div><div class="cta-icon-circle"><i class="fas fa-circle"></i></div></div></a>
-    <a href="form1.html" class="cta-button3"><div class="cta-top-row3"><div class="cta-label3">Mortgage </div><div class="cta-icon-circle"><i class="fas fa-circle-check"></i></div></div></a>
-    <a href="form1.html" class="cta-button3"><div class="cta-top-row3"><div class="cta-label3">Credit Repayments </div><div class="cta-icon-circle"><i class="fas fa-circle"></i></div></div></a>
-    <a href="form1.html" class="cta-button3"><div class="cta-top-row3"><div class="cta-label3">Other </div><div class="cta-icon-circle"><i class="fas fa-circle"></i></div></div></a>
+    <div class="cta-button3" onclick="selectOption(this, 'income')"><div class="cta-top-row3"><div class="cta-label3">Income </div><div class="cta-icon-circle"><i class="fas fa-circle"></i></div></div></div>
+    <div class="cta-button3 selected" onclick="selectOption(this, 'mortgage')"><div class="cta-top-row3"><div class="cta-label3">Mortgage </div><div class="cta-icon-circle"><i class="fas fa-circle-check"></i></div></div></div>
+    <div class="cta-button3" onclick="selectOption(this, 'credit')"><div class="cta-top-row3"><div class="cta-label3">Credit Repayments </div><div class="cta-icon-circle"><i class="fas fa-circle"></i></div></div></div>
+    <div class="cta-button3" onclick="selectOption(this, 'other')"><div class="cta-top-row3"><div class="cta-label3">Other </div><div class="cta-icon-circle"><i class="fas fa-circle"></i></div></div></div>
     <a href="form1.html" class="cta-next-button3">Next &gt;&gt;</a>
     
   </div>
@@ -150,6 +150,26 @@
   });
 </script>
 
+
+<script>
+function selectOption(clickedElement, optionValue) {
+  // Remove 'selected' class from all option buttons
+  const allButtons = document.querySelectorAll('.cta-button3:not(.cta-next-button3)');
+  allButtons.forEach(button => {
+    button.classList.remove('selected');
+    const icon = button.querySelector('.cta-icon-circle i');
+    icon.className = 'fas fa-circle';
+  });
+  
+  // Add 'selected' class to clicked button
+  clickedElement.classList.add('selected');
+  const clickedIcon = clickedElement.querySelector('.cta-icon-circle i');
+  clickedIcon.className = 'fas fa-circle-check';
+  
+  // Store the selected value (optional - could be used for form submission)
+  localStorage.setItem('selectedProtection', optionValue);
+}
+</script>
 
 </body>
 </html>
